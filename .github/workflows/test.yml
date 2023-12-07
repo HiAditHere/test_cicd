@@ -10,6 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
     - name: test
       run: |
         pytest test/unittest.py
