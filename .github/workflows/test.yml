@@ -24,3 +24,11 @@ jobs:
     - name: test
       run: |
         pytest test/unittest.py
+
+    - name: Notify on success
+      if: success()
+      run: echo "Unit tests passed successfully"
+
+    - name: Notify on failure
+      if: failure()
+      run: echo "Unit tests failed"
