@@ -7,5 +7,5 @@ sys.path.append(project_root)
 class TestPipeline(unittest.TestCase):
 
     def test_sample(self):
-        a = 3
+        a = 2
         self.assertEqual(a,3)
